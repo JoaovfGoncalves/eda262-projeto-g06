@@ -7,6 +7,7 @@
 # ----------------------------------------------------------------------------
 set -euo pipefail
 PARTE1="$(cd "$(dirname "$0")/.." && pwd)"
+source "$PARTE1/../verificacao/lib_athena.sh"   # define REGIAO a partir do terraform.tfvars
 WORKSPACE="${WORKSPACE:-av1}"
 APROVA=(); [[ "${1:-}" == "--auto-approve" ]] && APROVA=(-auto-approve)
 
@@ -19,7 +20,7 @@ terraform -chdir="$PARTE1/infra" workspace select default
 terraform -chdir="$PARTE1/infra" workspace delete "$WORKSPACE" || true
 
 echo; echo "== 3/3 destroy do bootstrap (bucket de state + tabela de lock)"
-terraform -chdir="$PARTE1/bootstrap" destroy -input=false -auto-approve
+terraform -chdir="$PARTE1/bootstrap" destroy -input=false -auto-approve -var "regiao=$REGIAO"
 rm -f "$PARTE1/infra/backend.hcl"
 
 echo; echo "Pronto. Prove: ./verificacao/verifica.sh --pos-destroy"

@@ -12,3 +12,4 @@ parte-1/dados/_download/
 
 __pycache__/
 .DS_Store
+.venv/

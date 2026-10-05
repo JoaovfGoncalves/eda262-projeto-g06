@@ -46,10 +46,9 @@ DECISOES.md         grão, chave, partição, formato, custo — com números me
 
 - Terraform ≥ 1.5, AWS CLI v2, `jq`, Python ≥ 3.9 (só biblioteca padrão), bash.
 - Conta AWS com permissão para S3, Glue, Athena e DynamoDB.
-- Região **us-east-1**. Todos os comandos saem da **raiz do repositório**.
+- Região **us-east-1**, definida em um só lugar: `parte-1/infra/terraform.tfvars`. Os scripts leem a região desse arquivo e **ignoram** `AWS_REGION`/`AWS_DEFAULT_REGION` do terminal, então não é preciso exportar nada. Todos os comandos saem da **raiz do repositório**.
 
 ```bash
-export AWS_REGION=us-east-1
 aws sts get-caller-identity          # confirme a conta antes de tudo
 chmod +x parte-1/scripts/*.sh parte-1/consultas/*.sh verificacao/*.sh
 ```

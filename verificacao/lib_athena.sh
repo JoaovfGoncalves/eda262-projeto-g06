@@ -1,11 +1,20 @@
 #!/usr/bin/env bash
 # ----------------------------------------------------------------------------
-# Funções compartilhadas por verifica.sh e parte-1/consultas/executar.sh.
+# Funções compartilhadas por verifica.sh, parte-1/consultas/executar.sh e
+# parte-1/scripts/{deploy,destroy}.sh.
 # Dependências: aws CLI v2, jq, terraform, awk.
 # ----------------------------------------------------------------------------
-REGIAO="${AWS_REGION:-${AWS_DEFAULT_REGION:-us-east-1}}"
 RAIZ="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 INFRA="$RAIZ/parte-1/infra"
+
+# Região: fonte única é o parte-1/infra/terraform.tfvars, o mesmo arquivo que
+# o Terraform usa. AWS_REGION/AWS_DEFAULT_REGION do terminal são IGNORADAS:
+# um avaliador com sa-east-1 configurado não pode fazer o verifica.sh procurar
+# os recursos numa região e o Terraform criá-los em outra.
+REGIAO=$(sed -nE 's/^[[:space:]]*regiao[[:space:]]*=[[:space:]]*"([^"]+)".*/\1/p' "$INFRA/terraform.tfvars" 2>/dev/null | head -n 1 || true)
+REGIAO="${REGIAO:-us-east-1}"
+# Toda chamada do AWS CLI feita depois deste ponto usa a mesma região,
+export AWS_REGION="$REGIAO" AWS_DEFAULT_REGION="$REGIAO"
 EVID="$RAIZ/evidencias"
 GRUPO="g06"
 PREFIXO="eda262-$GRUPO"
