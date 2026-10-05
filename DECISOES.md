@@ -51,7 +51,11 @@ A conta fecha exatamente: o `_BRASIL.csv` duplica linha a linha o que veio dos a
 
 **Número.** A trusted inteira ocupa **39.389.814 bytes (37,57 MB)**, e a pergunta de negócio lê a tabela inteira (todos os anos, turnos e cargos). Uma partição só ajudaria consultas que filtram um ano ou um cargo, e esse não é o uso desta entrega.
 
-**Sobre a raw.** As pastas `ano_2018/` e `ano_2022/` não são partições. São duas tabelas, uma por eleição, porque o leiaute do TSE é um contrato **por eleição**. Hoje os dois arquivos têm **50 colunas** cada, porque o TSE publica 2018 e 2022 no leiaute padronizado atual. Mas o TSE já mudou esse leiaute antes, por exemplo ao incluir as federações em 2022. Com uma tabela por eleição, a eleição de 2026 entra como tabela nova, e uma mudança de cabeçalho dela não desloca as colunas das eleições anteriores.
+**Sobre a raw.** As pastas `ano_2018/` e `ano_2022/` não são partições. São duas tabelas, uma por eleição, porque o leiaute do TSE é um contrato **por eleição** e a raw é lida **por posição**.
+
+Os dois leiautes têm **50 colunas** e diferem em **2**: as posições 32 e 33 se chamam `CD_SITUACAO_DIPLOMA` e `DS_SITUACAO_DIPLOMA` em 2018, e `CD_SITUACAO_DCONST_DIPLOMA` e `DS_SITUACAO_DCONST_DIPLOMA` em 2022 (comparação dos dois JSONs em `schemas/`). No nosso recorte, essas colunas vêm sem informação nos dois anos (`-3` / `#NE` em todas as 223.833 linhas de 2018 e 190.888 de 2022). As federações **não** são diferença de leiaute: o TSE publica 2018 no leiaute atual, e `NR_FEDERACAO` existe em 2018 com `-1` (sem federação) em todas as 223.833 linhas, porque federação só passou a existir em 2022.
+
+Por que isso sustenta duas tabelas: o `OpenCSVSerde` associa valor a coluna pela posição no arquivo. Numa tabela única com o schema de 2022, as posições 32 e 33 de 2018 seriam lidas com os nomes de 2022, sem nenhum erro. Hoje isso não altera nenhum número, porque as duas colunas estão vazias, mas é exatamente o mecanismo do risco: se o leiaute de 2026 inserir ou remover uma coluna no meio do arquivo, todas as seguintes deslocam e uma eleição inteira passa a ser lida com nomes errados, também sem erro. Com uma tabela por eleição, 2026 entra como tabela nova com o próprio contrato. O custo dessa escolha é que consultar os dois anos na raw exige `UNION ALL`, como na consulta 03.
 
 **O que aceitamos perder.** Toda consulta lê a trusted inteira. Na Parte 2, com Parquet, a partição candidata é `ano_eleicao`/`cd_cargo`, que são os filtros mais comuns em consultas além da pergunta principal.
 
