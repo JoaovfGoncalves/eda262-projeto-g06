@@ -13,15 +13,15 @@ Projeto da disciplina Engenharia de Dados (CESAR School, 2026.2), grupo **g06**.
   ZIP TSE ─────────────────────────────────────────────┐
                                                        ▼
  ┌──────────────────── Terraform · módulo "lake" (workspace av1) ───────────────────┐
- │ S3 eda262-g06-lake-raw-<conta>       tse/votacao_candidato_munzona/ano_AAAA/*.csv│
- │ S3 eda262-g06-lake-trusted-<conta>   votos_validos_zona/*.tsv                    │
- │ S3 eda262-g06-athena-resultados-<conta>                                          │
+ │ S3 eda262-g06-lake-raw               tse/votacao_candidato_munzona/ano_AAAA/*.csv│
+ │ S3 eda262-g06-lake-trusted           votos_validos_zona/*.tsv                    │
+ │ S3 eda262-g06-athena-resultados                                                  │
  │ Glue DB eda262_g06_eleicoes                                                      │
  │   ├─ raw_votacao_candidato_munzona_2018 / _2022   (schema declarado, strings)    │
  │   └─ trusted_votos_validos_zona                   (15 colunas tipadas, grão)     │
  │ Athena workgroup eda262-g06-wg (teto de bytes, config imposta, named queries)    │
  └──────────────────────────────────────────────────────────────────────────────────┘
- Backend remoto: S3 eda262-g06-tfstate-<conta> + DynamoDB eda262-g06-tflock (parte-1/bootstrap)
+ Backend remoto: S3 eda262-g06-tfstate + DynamoDB eda262-g06-tflock (parte-1/bootstrap)
 ```
 
 Todo recurso leva as tags `turma=eda262`, `grupo=g06`, `projeto=engenharia-de-dados` (via `default_tags`). Nenhum Crawler: os schemas são declarados.
@@ -63,7 +63,9 @@ chmod +x parte-1/scripts/*.sh parte-1/consultas/*.sh verificacao/*.sh
 ./verificacao/verifica.sh --pos-destroy      # prova que nada ficou
 ```
 
-O `deploy.sh` gera `parte-1/infra/backend.hcl` a partir dos outputs do bootstrap, porque o nome do bucket de state inclui o ID da conta. Esse arquivo não vai para o Git.
+O `deploy.sh` gera `parte-1/infra/backend.hcl` a partir dos outputs do bootstrap, para que o backend use sempre o nome real do bucket de state. Esse arquivo não vai para o Git.
+
+Os buckets seguem o padrão exato do guia (`eda262-g06-lake-raw`, `eda262-g06-lake-trusted`). Nome de bucket é global na AWS: se o `apply` falhar com `BucketAlreadyExists`, rode `export TF_VAR_sufixo_conta_nos_buckets=true` antes do `deploy.sh`, e o ID da conta é acrescentado ao nome de todos os buckets, inclusive o de state.
 
 ## Passo a passo — para o grupo (preparar a entrega)
 

@@ -4,14 +4,8 @@ Conta: 325583868777  Região: us-east-1
 [0m[1mInitializing the backend...[0m
 
 [0m[1mInitializing provider plugins...[0m
-- Finding hashicorp/aws versions matching ">= 5.40.0, < 7.0.0"...
-- Installing hashicorp/aws v6.67.0...
-- Installed hashicorp/aws v6.67.0 (signed by HashiCorp)
-
-Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
-selections it made above. Include this file in your version control repository
-so that Terraform can guarantee to make the same selections by default when
-you run "terraform init" in the future.[0m
+- Reusing previous version of hashicorp/aws from the dependency lock file
+- Using previously-installed hashicorp/aws v6.67.0
 
 [0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
 [0m[32m
@@ -73,7 +67,7 @@ Terraform will perform the following actions:
       [32m+[0m[0m acceleration_status         = (known after apply)
       [32m+[0m[0m acl                         = (known after apply)
       [32m+[0m[0m arn                         = (known after apply)
-      [32m+[0m[0m bucket                      = "eda262-g06-tfstate-325583868777"
+      [32m+[0m[0m bucket                      = "eda262-g06-tfstate"
       [32m+[0m[0m bucket_domain_name          = (known after apply)
       [32m+[0m[0m bucket_namespace            = (known after apply)
       [32m+[0m[0m bucket_prefix               = (known after apply)
@@ -157,43 +151,42 @@ Terraform will perform the following actions:
 
 Changes to Outputs:
   [32m+[0m[0m backend_hcl    = <<-EOT
-        bucket         = "eda262-g06-tfstate-325583868777"
+        bucket         = "eda262-g06-tfstate"
         key            = "parte-1/terraform.tfstate"
         region         = "us-east-1"
         dynamodb_table = "eda262-g06-tflock"
         encrypt        = true
     EOT
-  [32m+[0m[0m bucket_tfstate = "eda262-g06-tfstate-325583868777"
+  [32m+[0m[0m bucket_tfstate = "eda262-g06-tfstate"
   [32m+[0m[0m tabela_lock    = "eda262-g06-tflock"
 [0m[1maws_dynamodb_table.tflock: Creating...[0m[0m
 [0m[1maws_s3_bucket.tfstate: Creating...[0m[0m
-[0m[1maws_dynamodb_table.tflock: Still creating... [00m10s elapsed][0m[0m
-[0m[1maws_s3_bucket.tfstate: Still creating... [00m10s elapsed][0m[0m
-[0m[1maws_dynamodb_table.tflock: Creation complete after 19s [id=eda262-g06-tflock][0m
-[0m[1maws_s3_bucket.tfstate: Creation complete after 19s [id=eda262-g06-tfstate-325583868777][0m
+[0m[1maws_s3_bucket.tfstate: Creation complete after 5s [id=eda262-g06-tfstate][0m
 [0m[1maws_s3_bucket_versioning.tfstate: Creating...[0m[0m
 [0m[1maws_s3_bucket_public_access_block.tfstate: Creating...[0m[0m
 [0m[1maws_s3_bucket_server_side_encryption_configuration.tfstate: Creating...[0m[0m
-[0m[1maws_s3_bucket_server_side_encryption_configuration.tfstate: Creation complete after 1s [id=eda262-g06-tfstate-325583868777][0m
-[0m[1maws_s3_bucket_public_access_block.tfstate: Creation complete after 1s [id=eda262-g06-tfstate-325583868777][0m
-[0m[1maws_s3_bucket_versioning.tfstate: Creation complete after 2s [id=eda262-g06-tfstate-325583868777][0m
+[0m[1maws_s3_bucket_public_access_block.tfstate: Creation complete after 1s [id=eda262-g06-tfstate][0m
+[0m[1maws_s3_bucket_server_side_encryption_configuration.tfstate: Creation complete after 1s [id=eda262-g06-tfstate][0m
+[0m[1maws_s3_bucket_versioning.tfstate: Creation complete after 3s [id=eda262-g06-tfstate][0m
+[0m[1maws_dynamodb_table.tflock: Still creating... [00m10s elapsed][0m[0m
+[0m[1maws_dynamodb_table.tflock: Creation complete after 20s [id=eda262-g06-tflock][0m
 [0m[1m[32m
 Apply complete! Resources: 5 added, 0 changed, 0 destroyed.[0m
 [0m[1m[32m
 Outputs:
 
 [0mbackend_hcl = <<EOT
-bucket         = "eda262-g06-tfstate-325583868777"
+bucket         = "eda262-g06-tfstate"
 key            = "parte-1/terraform.tfstate"
 region         = "us-east-1"
 dynamodb_table = "eda262-g06-tflock"
 encrypt        = true
 
 EOT
-bucket_tfstate = "eda262-g06-tfstate-325583868777"
+bucket_tfstate = "eda262-g06-tfstate"
 tabela_lock = "eda262-g06-tflock"
 backend.hcl gerado:
-   bucket         = "eda262-g06-tfstate-325583868777"
+   bucket         = "eda262-g06-tfstate"
    key            = "parte-1/terraform.tfstate"
    region         = "us-east-1"
    dynamodb_table = "eda262-g06-tflock"
@@ -206,17 +199,10 @@ Successfully configured the backend "s3"! Terraform will automatically
 use this backend unless the backend configuration changes.[0m
 
 [0m[1mInitializing modules...[0m
-- lake in modules/lake
 
 [0m[1mInitializing provider plugins...[0m
-- Finding hashicorp/aws versions matching ">= 5.40.0, < 7.0.0"...
-- Installing hashicorp/aws v6.67.0...
-- Installed hashicorp/aws v6.67.0 (signed by HashiCorp)
-
-Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
-selections it made above. Include this file in your version control repository
-so that Terraform can guarantee to make the same selections by default when
-you run "terraform init" in the future.[0m
+- Reusing previous version of hashicorp/aws from the dependency lock file
+- Using previously-installed hashicorp/aws v6.67.0
 
 [33m╷[0m[0m
 [33m│[0m [0m[1m[33mWarning: [0m[0m[1mDeprecated Parameter[0m
@@ -349,7 +335,7 @@ Terraform will perform the following actions:
             -- ============================================================================
             -- Recorte da pergunta: 2º turno para Presidente, 2018 x 2022, por região.
             -- Para cada região: quem ficou à frente, com que percentual dos votos válidos
-            -- e qual a margem em pontos percentuais. Descritivo, sem juízo.
+            -- e qual a margem em pontos percentuais.
             -- ============================================================================
             WITH por_regiao AS (
                 SELECT ano_eleicao, regiao, nm_urna_candidato, sg_partido,
@@ -365,20 +351,19 @@ Terraform will perform the following actions:
                 FROM por_regiao
             )
             SELECT
-                a.ano_eleicao,
-                a.regiao,
-                a.nm_urna_candidato || ' (' || a.sg_partido || ')'  AS a_frente,
-                ROUND(a.pct, 2)                                    AS pct_a_frente,
-                b.nm_urna_candidato || ' (' || b.sg_partido || ')'  AS segundo,
-                ROUND(b.pct, 2)                                    AS pct_segundo,
-                ROUND(a.pct - b.pct, 2)                            AS margem_pp,
-                a.votos_validos + b.votos_validos                  AS votos_validos_regiao
-            FROM ranqueado a
-            JOIN ranqueado b
-              ON a.ano_eleicao = b.ano_eleicao AND a.regiao = b.regiao AND a.pos = 1 AND b.pos = 2
-            ORDER BY a.ano_eleicao,
-                     CASE a.regiao WHEN 'N' THEN 1 WHEN 'NE' THEN 2 WHEN 'CO' THEN 3
-                                   WHEN 'SE' THEN 4 WHEN 'S' THEN 5 ELSE 6 END
+                ano_eleicao,
+                regiao,
+                MAX(CASE WHEN pos = 1 THEN nm_urna_candidato || ' (' || sg_partido || ')' END) AS a_frente,
+                ROUND(MAX(CASE WHEN pos = 1 THEN pct END), 2)                                  AS pct_a_frente,
+                MAX(CASE WHEN pos = 2 THEN nm_urna_candidato || ' (' || sg_partido || ')' END) AS segundo,
+                ROUND(MAX(CASE WHEN pos = 2 THEN pct END), 2)                                  AS pct_segundo,
+                ROUND(MAX(CASE WHEN pos = 1 THEN pct END) - MAX(CASE WHEN pos = 2 THEN pct END), 2) AS margem_pp,
+                SUM(CASE WHEN pos IN (1, 2) THEN votos_validos END)                            AS votos_validos_regiao
+            FROM ranqueado
+            GROUP BY ano_eleicao, regiao
+            ORDER BY ano_eleicao,
+                     CASE regiao WHEN 'N' THEN 1 WHEN 'NE' THEN 2 WHEN 'CO' THEN 3
+                                 WHEN 'SE' THEN 4 WHEN 'S' THEN 5 ELSE 6 END
         EOT
       [32m+[0m[0m region      = "us-east-1"
       [32m+[0m[0m workgroup   = (known after apply)
@@ -1158,7 +1143,7 @@ Terraform will perform the following actions:
       [32m+[0m[0m acceleration_status         = (known after apply)
       [32m+[0m[0m acl                         = (known after apply)
       [32m+[0m[0m arn                         = (known after apply)
-      [32m+[0m[0m bucket                      = "eda262-g06-lake-raw-325583868777"
+      [32m+[0m[0m bucket                      = "eda262-g06-lake-raw"
       [32m+[0m[0m bucket_domain_name          = (known after apply)
       [32m+[0m[0m bucket_namespace            = (known after apply)
       [32m+[0m[0m bucket_prefix               = (known after apply)
@@ -1203,7 +1188,7 @@ Terraform will perform the following actions:
       [32m+[0m[0m acceleration_status         = (known after apply)
       [32m+[0m[0m acl                         = (known after apply)
       [32m+[0m[0m arn                         = (known after apply)
-      [32m+[0m[0m bucket                      = "eda262-g06-athena-resultados-325583868777"
+      [32m+[0m[0m bucket                      = "eda262-g06-athena-resultados"
       [32m+[0m[0m bucket_domain_name          = (known after apply)
       [32m+[0m[0m bucket_namespace            = (known after apply)
       [32m+[0m[0m bucket_prefix               = (known after apply)
@@ -1248,7 +1233,7 @@ Terraform will perform the following actions:
       [32m+[0m[0m acceleration_status         = (known after apply)
       [32m+[0m[0m acl                         = (known after apply)
       [32m+[0m[0m arn                         = (known after apply)
-      [32m+[0m[0m bucket                      = "eda262-g06-lake-trusted-325583868777"
+      [32m+[0m[0m bucket                      = "eda262-g06-lake-trusted"
       [32m+[0m[0m bucket_domain_name          = (known after apply)
       [32m+[0m[0m bucket_namespace            = (known after apply)
       [32m+[0m[0m bucket_prefix               = (known after apply)
@@ -4639,301 +4624,284 @@ Changes to Outputs:
   [32m+[0m[0m teto_bytes         = 116391936
   [32m+[0m[0m workgroup_name     = "eda262-g06-wg"
 [0m[1mmodule.lake.aws_glue_catalog_database.eleicoes: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_bucket.lake["raw"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_bucket.lake["resultados"]: Creating...[0m[0m
 [0m[1mmodule.lake.aws_s3_bucket.lake["trusted"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_bucket.lake["resultados"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_bucket.lake["raw"]: Creating...[0m[0m
 [0m[1mmodule.lake.aws_glue_catalog_database.eleicoes: Creation complete after 2s [id=325583868777:eda262_g06_eleicoes][0m
-[0m[1mmodule.lake.aws_s3_bucket.lake["resultados"]: Creation complete after 5s [id=eda262-g06-athena-resultados-325583868777][0m
+[0m[1mmodule.lake.aws_s3_bucket.lake["raw"]: Creation complete after 5s [id=eda262-g06-lake-raw][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AP.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ZZ.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AM.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PA.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MA.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RS.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_glue_catalog_table.raw["2022"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_glue_catalog_table.raw["2018"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_bucket.lake["trusted"]: Creation complete after 5s [id=eda262-g06-lake-trusted][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RS.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_glue_catalog_table.raw["2022"]: Creation complete after 0s [id=325583868777:eda262_g06_eleicoes:raw_votacao_candidato_munzona_2022][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MA.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_glue_catalog_table.raw["2018"]: Creation complete after 0s [id=325583868777:eda262_g06_eleicoes:raw_votacao_candidato_munzona_2018][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RN.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_bucket.lake["resultados"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AP.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AP.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PR.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ZZ.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ZZ.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_DF.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PA.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PA.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AM.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AM.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SE.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MA.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MA.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ES.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MA.csv"]: Creation complete after 7s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MA.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PA.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RS.csv"]: Creation complete after 7s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RS.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RO.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_bucket.lake["resultados"]: Creation complete after 12s [id=eda262-g06-athena-resultados][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RJ.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_DF.csv"]: Creation complete after 1s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_DF.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_TO.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RO.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RO.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MS.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_TO.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_TO.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PA.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PA.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_DF.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PR.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RS.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MS.csv"]: Creation complete after 1s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MS.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_BA.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_DF.csv"]: Creation complete after 1s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_DF.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AP.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RN.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RN.csv"]: Creation complete after 11s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RN.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PB.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AP.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AP.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AM.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SE.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SE.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_TO.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ES.csv"]: Creation complete after 8s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ES.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RR.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AM.csv"]: Creation complete after 3s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AM.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PE.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RS.csv"]: Creation complete after 15s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RS.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RO.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PR.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RJ.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RR.csv"]: Creation complete after 3s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RR.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PR.csv"]: Creation complete after 10s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PR.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_TO.csv"]: Creation complete after 7s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_TO.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PE.csv"]: Creation complete after 4s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PE.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RO.csv"]: Creation complete after 4s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RO.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PR.csv"]: Creation complete after 13s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PR.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AC.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ZZ.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PE.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_GO.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_BA.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AC.csv"]: Creation complete after 1s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AC.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ES.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ZZ.csv"]: Creation complete after 1s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ZZ.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MG.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_BA.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PB.csv"]: Creation complete after 10s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PB.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AL.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ES.csv"]: Creation complete after 3s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ES.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SC.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_GO.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_GO.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PI.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PE.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PE.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MT.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_BA.csv"]: Creation complete after 15s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_BA.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RR.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AL.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AL.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SC.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv"]: Still creating... [00m20s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RJ.csv"]: Creation complete after 20s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RJ.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SE.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RR.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RR.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MS.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MT.csv"]: Creation complete after 3s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MT.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AL.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv"]: Creation complete after 22s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RJ.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_BA.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AL.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AL.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_BA.csv"]: Creation complete after 11s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_BA.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_CE.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RJ.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RJ.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PI.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MG.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SE.csv"]: Creation complete after 3s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SE.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_CE.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MS.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MS.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PB.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PI.csv"]: Creation complete after 3s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PI.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MT.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SC.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_CE.csv"]: Creation complete after 4s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_CE.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AC.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MG.csv"]: Creation complete after 14s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MG.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_GO.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PI.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AC.csv"]: Creation complete after 1s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AC.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RN.csv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PI.csv"]: Creation complete after 11s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PI.csv][0m
+[0m[1mmodule.lake.aws_glue_catalog_table.trusted: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MT.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MT.csv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_ZZ.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SC.csv"]: Creation complete after 13s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SC.csv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MT.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SC.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_glue_catalog_table.trusted: Creation complete after 1s [id=325583868777:eda262_g06_eleicoes:trusted_votos_validos_zona][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_BA.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PB.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PB.csv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RS.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RN.csv"]: Creation complete after 3s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RN.csv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MT.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv"]: Creation complete after 19s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PE.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_GO.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_GO.csv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_ZZ.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_CE.csv"]: Creation complete after 9s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_CE.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv"]: Still creating... [00m10s elapsed][0m[0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv"]: Creation complete after 16s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv][0m
+[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SC.csv"]: Creation complete after 19s [id=eda262-g06-lake-raw/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SC.csv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MT.tsv"]: Creation complete after 9s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_MT.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_ZZ.tsv"]: Creation complete after 10s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_ZZ.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PE.tsv"]: Creation complete after 7s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_PE.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_ZZ.tsv"]: Creation complete after 6s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_ZZ.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_BA.tsv"]: Creation complete after 9s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_BA.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RS.tsv"]: Creation complete after 8s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_RS.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MT.tsv"]: Creation complete after 7s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_MT.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RO.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MA.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RJ.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PR.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AC.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SE.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MA.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_TO.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_BA.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MG.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AC.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_AC.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PA.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RO.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_RO.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MS.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SE.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_SE.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_DF.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RJ.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_RJ.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AM.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MA.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_MA.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RN.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MA.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_MA.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_ES.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MS.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_MS.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_DF.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_DF.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PB.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SP.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_TO.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_TO.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SC.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PA.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_PA.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RN.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AM.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_AM.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AM.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_ES.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_ES.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MG.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_BA.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_BA.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RN.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_RN.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_GO.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PR.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PR.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_PR.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SC.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PB.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_PB.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_DF.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AM.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_AM.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PI.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_DF.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_DF.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AP.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_GO.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_GO.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AL.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RN.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_RN.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SP.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AP.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_AP.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_TO.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PI.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_PI.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RR.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SC.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_SC.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RJ.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MG.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_MG.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_CE.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SC.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_SC.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AC.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AL.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_AL.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_CE.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RR.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_RR.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AP.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SP.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_SP.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SE.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_TO.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_TO.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RR.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_CE.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_CE.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_GO.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AC.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_AC.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AL.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AP.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_AP.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MS.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RJ.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_RJ.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PR.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_PR.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PE.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RS.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RR.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_RR.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PA.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SE.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_SE.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PI.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MG.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_MG.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RO.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_CE.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_CE.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_ES.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AL.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_AL.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PB.tsv"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MS.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_MS.tsv][0m
 [0m[1mmodule.lake.aws_athena_workgroup.lake: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_GO.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_GO.tsv][0m
+[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["trusted"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RO.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_RO.tsv][0m
+[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["resultados"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PA.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_PA.tsv][0m
+[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["raw"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_ES.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_ES.tsv][0m
+[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["trusted"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PE.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_PE.tsv][0m
+[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["resultados"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PI.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2018_PI.tsv][0m
+[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["raw"]: Creating...[0m[0m
+[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["trusted"]: Creation complete after 1s [id=eda262-g06-lake-trusted][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PB.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_PB.tsv][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RS.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_RS.tsv][0m
 [0m[1mmodule.lake.aws_athena_workgroup.lake: Creation complete after 1s [id=eda262-g06-wg][0m
 [0m[1mmodule.lake.aws_athena_named_query.consultas["pergunta-votos-validos-por-regiao"]: Creating...[0m[0m
 [0m[1mmodule.lake.aws_athena_named_query.consultas["presidente-2t-por-regiao-2018-2022"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_athena_named_query.consultas["presidente-2t-por-regiao-2018-2022"]: Creation complete after 0s [id=8ee00db3-fc39-4901-956f-73ffb83d96af][0m
-[0m[1mmodule.lake.aws_athena_named_query.consultas["pergunta-votos-validos-por-regiao"]: Creation complete after 0s [id=30baef56-ae4c-46a3-9129-df92d55242ce][0m
-[0m[1mmodule.lake.aws_s3_bucket.lake["trusted"]: Creation complete after 8s [id=eda262-g06-lake-trusted-325583868777][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MS.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MS.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AC.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MA.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SC.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AC.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PE.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MG.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_glue_catalog_table.trusted: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_bucket.lake["raw"]: Creation complete after 9s [id=eda262-g06-lake-raw-325583868777][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AL.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_glue_catalog_table.trusted: Creation complete after 1s [id=325583868777:eda262_g06_eleicoes:trusted_votos_validos_zona][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RO.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MA.tsv"]: Creation complete after 6s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_MA.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MS.tsv"]: Creation complete after 6s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_MS.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PE.tsv"]: Creation complete after 6s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_PE.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SC.tsv"]: Creation complete after 6s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_SC.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MS.tsv"]: Creation complete after 6s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_MS.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_ES.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_GO.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SC.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RS.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PI.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AC.tsv"]: Creation complete after 6s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_AC.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AC.tsv"]: Creation complete after 6s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_AC.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_CE.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PE.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MG.tsv"]: Creation complete after 7s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_MG.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MG.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RO.tsv"]: Creation complete after 7s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_RO.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_ZZ.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AL.tsv"]: Creation complete after 7s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_AL.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RN.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_ES.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_ES.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AL.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_CE.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_CE.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MT.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_ZZ.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_ZZ.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_BA.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PI.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_PI.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_BA.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AL.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_AL.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RJ.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MG.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_MG.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AM.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PE.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_PE.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RJ.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_GO.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_GO.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RS.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AM.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_AM.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RN.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RN.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_RN.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SE.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MT.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_MT.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PA.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SC.tsv"]: Creation complete after 5s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_SC.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_DF.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RN.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_RN.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AM.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RJ.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_RJ.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_DF.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_DF.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_DF.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PB.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SE.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_SE.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_GO.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RJ.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_RJ.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RR.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AM.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_AM.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RO.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PA.tsv"]: Creation complete after 2s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_PA.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PR.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_BA.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_BA.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PB.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_DF.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_DF.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SP.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PB.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_PB.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PR.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RS.tsv"]: Creation complete after 7s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_RS.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_RR.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_RR.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MA.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PI.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_BA.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_BA.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RO.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_RO.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RS.tsv"]: Creation complete after 6s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_RS.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_GO.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_GO.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PR.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_PR.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_MA.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_MA.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PB.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_PB.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AP.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_CE.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_TO.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PA.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_TO.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MT.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SP.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PI.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_PI.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_ES.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_PR.tsv"]: Creation complete after 3s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_PR.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_ZZ.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_AP.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_AP.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AP.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_CE.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_CE.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SE.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_MT.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_MT.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RR.tsv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SP.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_SP.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_TO.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_TO.tsv][0m
-[0m[1mmodule.lake.aws_glue_catalog_table.raw["2018"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_glue_catalog_table.raw["2022"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_ES.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_ES.tsv][0m
-[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["raw"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_AP.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_AP.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_ZZ.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_ZZ.tsv][0m
-[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["trusted"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["resultados"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_TO.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_TO.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_PA.tsv"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_PA.tsv][0m
-[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["trusted"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RJ.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_RR.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_RR.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SE.tsv"]: Creation complete after 0s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2022_SE.tsv][0m
-[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["raw"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ZZ.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["trusted"]: Creation complete after 0s [id=eda262-g06-lake-trusted-325583868777][0m
-[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["resultados"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_glue_catalog_table.raw["2018"]: Creation complete after 1s [id=325583868777:eda262_g06_eleicoes:raw_votacao_candidato_munzona_2018][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MT.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["trusted"]: Creation complete after 1s [id=eda262-g06-lake-trusted-325583868777][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PE.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_glue_catalog_table.raw["2022"]: Creation complete after 1s [id=325583868777:eda262_g06_eleicoes:raw_votacao_candidato_munzona_2022][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MT.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["resultados"]: Creation complete after 1s [id=eda262-g06-athena-resultados-325583868777][0m
-[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["resultados"]: Creation complete after 1s [id=eda262-g06-athena-resultados-325583868777][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RO.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_CE.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["raw"]: Creation complete after 2s [id=eda262-g06-lake-raw-325583868777][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RN.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2018_SP.tsv"]: Creation complete after 7s [id=eda262-g06-lake-trusted-325583868777/votos_validos_zona/votos_validos_zona_2018_SP.tsv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_GO.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["raw"]: Creation complete after 6s [id=eda262-g06-lake-raw-325583868777][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PE.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ZZ.csv"]: Creation complete after 7s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ZZ.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MT.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MT.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AM.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MS.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MT.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MT.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AL.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RO.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RO.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PI.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PE.csv"]: Creation complete after 8s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PE.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PR.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_CE.csv"]: Creation complete after 8s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_CE.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AM.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RJ.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RJ.csv"]: Creation complete after 10s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RJ.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SE.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AM.csv"]: Creation complete after 1s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AM.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AP.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AP.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AP.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_TO.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RN.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AM.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AM.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MA.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AL.csv"]: Creation complete after 7s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AL.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_BA.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_TO.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_TO.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_DF.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PI.csv"]: Creation complete after 7s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PI.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RN.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MS.csv"]: Creation complete after 7s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MS.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SE.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SE.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_DF.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_GO.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PE.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_DF.csv"]: Creation complete after 4s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_DF.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_BA.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PR.csv"]: Creation complete after 9s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PR.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MA.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_DF.csv"]: Creation complete after 3s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_DF.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RO.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PE.csv"]: Creation complete after 12s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PE.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_TO.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_GO.csv"]: Creation complete after 13s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_GO.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RN.csv"]: Still creating... [00m20s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MA.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RN.csv"]: Creation complete after 21s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RN.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RN.csv"]: Creation complete after 9s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RN.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_TO.csv"]: Creation complete after 4s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_TO.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RO.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RO.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MA.csv"]: Creation complete after 10s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MA.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SE.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ES.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MS.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RJ.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SC.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MA.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MA.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_CE.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_BA.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MS.csv"]: Creation complete after 4s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MS.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PI.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SE.csv"]: Creation complete after 4s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SE.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_GO.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ES.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_ES.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PA.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_BA.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_CE.csv"]: Creation complete after 8s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_CE.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AP.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_BA.csv"]: Creation complete after 19s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_BA.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SC.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RJ.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SC.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AP.csv"]: Creation complete after 3s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AP.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PB.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv"]: Still creating... [00m20s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PI.csv"]: Creation complete after 8s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PI.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RS.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_GO.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PA.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PA.csv"]: Creation complete after 10s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PA.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PB.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_BA.csv"]: Creation complete after 20s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_BA.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_GO.csv"]: Creation complete after 11s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_GO.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RS.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PB.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PB.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AC.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SC.csv"]: Creation complete after 19s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SC.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AC.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SC.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RJ.csv"]: Still creating... [00m20s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv"]: Still creating... [00m20s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv"]: Still creating... [00m30s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RS.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AC.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_AC.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PB.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RS.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AC.csv"]: Creation complete after 7s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AC.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RJ.csv"]: Creation complete after 26s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RJ.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SC.csv"]: Creation complete after 16s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SC.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PB.csv"]: Creation complete after 11s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_PB.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RR.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AL.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ZZ.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ES.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PA.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RR.csv"]: Creation complete after 1s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RR.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PR.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RS.csv"]: Creation complete after 16s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RS.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RR.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ZZ.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ZZ.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MG.csv"]: Creating...[0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RR.csv"]: Creation complete after 2s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_RR.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv"]: Still creating... [00m30s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv"]: Still creating... [00m40s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AL.csv"]: Creation complete after 5s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_AL.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ES.csv"]: Creation complete after 6s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_ES.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv"]: Still creating... [00m20s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RS.csv"]: Still creating... [00m20s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PA.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PA.csv"]: Creation complete after 10s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PA.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PR.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MG.csv"]: Still creating... [00m10s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv"]: Creation complete after 49s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_SP.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv"]: Still creating... [00m40s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv"]: Creation complete after 42s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_MG.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RS.csv"]: Creation complete after 30s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2022/votacao_candidato_munzona_2022_RS.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PR.csv"]: Creation complete after 17s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_PR.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv"]: Still creating... [00m30s elapsed][0m[0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv"]: Creation complete after 30s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_SP.csv][0m
-[0m[1mmodule.lake.aws_s3_object.raw["tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MG.csv"]: Creation complete after 17s [id=eda262-g06-lake-raw-325583868777/tse/votacao_candidato_munzona/ano_2018/votacao_candidato_munzona_2018_MG.csv][0m
+[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["trusted"]: Creation complete after 1s [id=eda262-g06-lake-trusted][0m
+[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["resultados"]: Creation complete after 1s [id=eda262-g06-athena-resultados][0m
+[0m[1mmodule.lake.aws_athena_named_query.consultas["presidente-2t-por-regiao-2018-2022"]: Creation complete after 0s [id=c641dc20-58cb-485e-86aa-97cacd25188e][0m
+[0m[1mmodule.lake.aws_athena_named_query.consultas["pergunta-votos-validos-por-regiao"]: Creation complete after 0s [id=63431f73-dc97-4674-b806-70eaff87d2b8][0m
+[0m[1mmodule.lake.aws_s3_bucket_server_side_encryption_configuration.lake["raw"]: Creation complete after 1s [id=eda262-g06-lake-raw][0m
+[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["resultados"]: Creation complete after 0s [id=eda262-g06-athena-resultados][0m
+[0m[1mmodule.lake.aws_s3_bucket_public_access_block.lake["raw"]: Creation complete after 0s [id=eda262-g06-lake-raw][0m
+[0m[1mmodule.lake.aws_s3_object.trusted["votos_validos_zona/votos_validos_zona_2022_SP.tsv"]: Creation complete after 4s [id=eda262-g06-lake-trusted/votos_validos_zona/votos_validos_zona_2022_SP.tsv][0m
 [0m[1m[32m
 Apply complete! Resources: 128 added, 0 changed, 0 destroyed.[0m
 [0m[1m[32m
 Outputs:
 
-[0mbucket_raw = "eda262-g06-lake-raw-325583868777"
-bucket_resultados = "eda262-g06-athena-resultados-325583868777"
-bucket_trusted = "eda262-g06-lake-trusted-325583868777"
+[0mbucket_raw = "eda262-g06-lake-raw"
+bucket_resultados = "eda262-g06-athena-resultados"
+bucket_trusted = "eda262-g06-lake-trusted"
 database_name = "eda262_g06_eleicoes"
 objetos_carregados = {
   "raw" = 56

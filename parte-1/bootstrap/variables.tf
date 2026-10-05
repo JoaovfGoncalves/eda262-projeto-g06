@@ -9,6 +9,12 @@ variable "grupo" {
   }
 }
 
+variable "sufixo_conta_nos_buckets" {
+  description = "Mesma chave da stack infra: acrescenta o ID da conta ao bucket de state. Desligado = padrão do guia."
+  type        = bool
+  default     = false
+}
+
 variable "regiao" {
   description = "Região AWS do projeto."
   type        = string

@@ -13,3 +13,7 @@ data_hora_utc,consulta,workgroup,estado,bytes_varridos,mb_cobrados,custo_usd,tem
 2026-10-05T04:22:04Z,reconciliacao_presidente_2t,eda262-g06-wg,SUCCEEDED,39389814,38,0.00018120,643,ad63c461-1346-4d11-bd21-dc3874a27ffc
 2026-10-05T04:22:14Z,01_pergunta_votos_validos_por_regiao,eda262-g06-wg,SUCCEEDED,39389814,38,0.00018120,869,f5d5a3e8-b9b2-4cd7-8e25-78b740bb0924
 2026-10-05T04:22:19Z,03_mesma_pergunta_na_raw,eda262-g06-wg,CANCELLED,116391936,111,0.00052929,1185,52b4c67e-19de-4ca9-9fde-28c0914280a5
+2026-10-05T05:27:36Z,04_qualidade_grao,eda262-g06-wg,SUCCEEDED,39389814,38,0.00018120,937,2f0a34a1-3ad9-4131-a5b9-b1e14e7f7ddd
+2026-10-05T05:27:41Z,reconciliacao_presidente_2t,eda262-g06-wg,SUCCEEDED,39389814,38,0.00018120,576,82599581-2c68-441f-968c-3560a26b4a75
+2026-10-05T05:27:46Z,01_pergunta_votos_validos_por_regiao,eda262-g06-wg,SUCCEEDED,39389814,38,0.00018120,918,871c2943-d43a-4487-83a2-7c0f241ed116
+2026-10-05T05:27:54Z,03_mesma_pergunta_na_raw,eda262-g06-wg,CANCELLED,116391936,111,0.00052929,1607,3c4b795c-8e91-47bc-bbc6-50d0f92408d0

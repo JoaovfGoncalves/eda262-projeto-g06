@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # Armazenamento: um bucket por camada + um para resultados do Athena.
-# Nomes no padrão eda262-gNN-lake-<camada> do guia (+ sufixo da conta).
+# Nomes no padrão eda262-gNN-lake-<camada> do guia (sufixo da conta só se ligado).
 # ----------------------------------------------------------------------------
 locals {
   buckets = {

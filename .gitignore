@@ -4,7 +4,7 @@
 *.tfstate.*
 *.tfplan
 crash.log
-# gerado pelo deploy a partir do bootstrap (contém o ID da conta)
+# gerado pelo deploy a partir dos outputs do bootstrap
 parte-1/infra/backend.hcl
 
 # ZIPs originais do TSE (centenas de MB); o que versionamos é o recorte em parte-1/dados/

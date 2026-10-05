@@ -2,9 +2,9 @@ data "aws_caller_identity" "atual" {}
 
 locals {
   prefixo = "eda262-${var.grupo}"
-  # Nome de bucket é global na AWS: o sufixo com o ID da conta evita colisão
-  # quando a mesma stack sobe na conta do grupo e na conta do avaliador.
-  bucket_tfstate = "${local.prefixo}-tfstate-${data.aws_caller_identity.atual.account_id}"
+  # Padrão do guia: eda262-gNN-<recurso>. O sufixo com o ID da conta é a
+  # válvula de escape para colisão de nome global (desligado por padrão).
+  bucket_tfstate = "${local.prefixo}-tfstate${var.sufixo_conta_nos_buckets ? "-${data.aws_caller_identity.atual.account_id}" : ""}"
 }
 
 resource "aws_s3_bucket" "tfstate" {

@@ -30,7 +30,11 @@ variable "teto_bytes" {
 }
 
 variable "sufixo_conta_nos_buckets" {
-  description = "Acrescenta o ID da conta ao nome dos buckets (nome de bucket é global na AWS)."
+  description = <<-EOT
+    Desligado: buckets no padrão exato do guia (eda262-gNN-lake-<camada>).
+    Ligue (TF_VAR_sufixo_conta_nos_buckets=true) só se o apply falhar com
+    BucketAlreadyExists: acrescenta o ID da conta ao nome dos buckets.
+  EOT
   type        = bool
-  default     = true
+  default     = false
 }
