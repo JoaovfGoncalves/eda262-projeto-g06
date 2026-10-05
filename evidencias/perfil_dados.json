@@ -1,0 +1,99 @@
+{
+  "gerado_por": "parte-1/dados/preparar_dados.py",
+  "anos": [
+    {
+      "ano": 2018,
+      "zip": "votacao_candidato_munzona_2018.zip",
+      "zip_sha256": "f880848ef4ba340b15cb91ff0754aa370d34ca7b7e605d6607c0f2a75009adc8",
+      "colunas_raw": 50,
+      "coluna_votos": "QT_VOTOS_NOMINAIS_VALIDOS",
+      "regra_validade": "NM_TIPO_DESTINACAO_VOTOS começa com 'Válido'",
+      "contagens": {
+        "linhas_lidas_tse": 17360216,
+        "linhas_cargos_pergunta": 447666,
+        "atributos_nulos_por_sentinela": 0,
+        "rejeitadas_eleicao_nao_geral_ex_suplementar": 1606,
+        "linhas_nacional_duplicadas_ignoradas": 223833,
+        "linhas_completadas_pelo_nacional": 93600
+      },
+      "votos_excluidos": {
+        "eleicao_nao_geral": 1431699
+      },
+      "linhas_trusted": 222227,
+      "bytes_raw_texto": 103886482,
+      "bytes_raw_se_gzip": 4355468,
+      "bytes_trusted_texto": 21609077,
+      "bytes_trusted_se_gzip": 1584304,
+      "reconciliacao_presidente_2t": {
+        "17": {
+          "trusted": 57797847,
+          "oficial": 57797847,
+          "diferenca": 0
+        },
+        "13": {
+          "trusted": 47040906,
+          "oficial": 47040906,
+          "diferenca": 0
+        }
+      },
+      "reconciliacao_ok": true
+    },
+    {
+      "ano": 2022,
+      "zip": "votacao_candidato_munzona_2022.zip",
+      "zip_sha256": "b5bd20d7e2aee66c142ff38cebaaf7f31b84bc6aaaee1ae09ae4b66778c96b7d",
+      "colunas_raw": 50,
+      "coluna_votos": "QT_VOTOS_NOMINAIS_VALIDOS",
+      "regra_validade": "NM_TIPO_DESTINACAO_VOTOS começa com 'Válido'",
+      "contagens": {
+        "linhas_lidas_tse": 18755690,
+        "linhas_cargos_pergunta": 381776,
+        "atributos_nulos_por_sentinela": 0,
+        "rejeitadas_voto_nao_valido": 5146,
+        "rejeitadas_eleicao_nao_geral_ex_suplementar": 48,
+        "linhas_nacional_duplicadas_ignoradas": 190888,
+        "linhas_completadas_pelo_nacional": 81679
+      },
+      "votos_excluidos": {
+        "destinacao_nao_valida": 569456,
+        "eleicao_nao_geral": 262849
+      },
+      "linhas_trusted": 185694,
+      "bytes_raw_texto": 90674849,
+      "bytes_raw_se_gzip": 3764101,
+      "bytes_trusted_texto": 17780737,
+      "bytes_trusted_se_gzip": 1323636,
+      "reconciliacao_presidente_2t": {
+        "13": {
+          "trusted": 60345999,
+          "oficial": 60345999,
+          "diferenca": 0
+        },
+        "22": {
+          "trusted": 58206354,
+          "oficial": 58206354,
+          "diferenca": 0
+        }
+      },
+      "reconciliacao_ok": true
+    }
+  ],
+  "lake": {
+    "formato_gravado": "texto puro",
+    "raw_bytes_arquivos": 194561331,
+    "raw_bytes_texto": 194561331,
+    "raw_bytes_se_gzip": 8119569,
+    "trusted_bytes_arquivos": 39389814,
+    "trusted_bytes_texto": 39389814,
+    "trusted_bytes_se_gzip": 2907940,
+    "linhas_trusted_total": 407921
+  },
+  "teto": {
+    "intervalo_util_bytes": [
+      39389814,
+      194561331
+    ],
+    "sugestao_bytes": 116391936,
+    "observacao": "medição local (tamanho dos arquivos = bytes que o Athena varre); confirmar com consultas/executar.sh"
+  }
+}

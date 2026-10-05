@@ -1,0 +1,18 @@
+== verifica.sh · Parte 1 · eda262-g06 · conta 325583868777 · região us-east-1 · 2026-10-05T03:57:37Z
+
+[PASSA] [0] nenhum Crawler: nem no código, nem na conta
+[PASSA] [1] módulo lake + backend s3 com lock DynamoDB (eda262-g06-tflock) + workspace 'av1'
+[PASSA] [2] 3 buckets, database, workgroup e lock: prefixo eda262-g06- e tags turma/grupo/projeto
+[PASSA] [3] trusted com 15 colunas (9 tipadas), grão e chave declarados; 2 tabelas raw
+        grão : 1 linha = votos válidos de 1 candidato, em 1 zona eleitoral de 1 município, em 1 turno, para 1 cargo, em 1 eleição (ano)
+        chave: ano_eleicao,nr_turno,cd_cargo,sg_uf,cd_municipio,nr_zona,sq_candidato
+[PASSA] [4] grão respeitado: 407921 linhas = 407921 chaves distintas, 0 repetidas, 0 nulas
+[PASSA] [5] votos válidos do 2º turno batem com o TSE, voto a voto (2018 e 2022)
+[PASSA] [6] pergunta respondida: 149 linhas, regiões: CO EX N NE S SE 
+        varrido 39389814 bytes (37.57 MB) · cobrado 38 MB · US$ 0.00018120 · 764 ms
+[PASSA] [7] teto de 116391936 bytes (111.00 MB): raw morreu (CANCELLED), trusted passou com 39389814 bytes (37.57 MB)
+        11 número(s) ainda marcados «MEDIR…» no DECISOES.md
+[FALHA] [8] DECISOES.md incompleto
+
+Resultado: 8 PASSA · 1 FALHA
+Evidência gravada em evidencias/verifica_deploy_20261005T035735Z.txt

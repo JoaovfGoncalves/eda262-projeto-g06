@@ -1,0 +1,14 @@
+# Terraform: state e plano nunca vão para o Git
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+# gerado pelo deploy a partir do bootstrap (contém o ID da conta)
+parte-1/infra/backend.hcl
+
+# ZIPs originais do TSE (centenas de MB); o que versionamos é o recorte em parte-1/dados/
+parte-1/dados/_download/
+
+__pycache__/
+.DS_Store
