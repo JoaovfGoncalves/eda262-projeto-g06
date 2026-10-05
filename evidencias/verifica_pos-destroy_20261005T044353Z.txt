@@ -1,0 +1,10 @@
+== verifica.sh · Parte 1 · eda262-g06 · conta 325583868777 · região us-east-1 · 2026-10-05T04:43:54Z
+
+[PASSA] [P1] nenhum bucket eda262-g06-* na conta
+[PASSA] [P2] database eda262_g06_eleicoes não existe
+[PASSA] [P3] workgroup eda262-g06-wg não existe
+[PASSA] [P4] tabela de lock eda262-g06-tflock não existe
+[PASSA] [P5] nenhum recurso com as tags turma=eda262, grupo=g06
+
+Resultado: 5 PASSA · 0 FALHA
+Evidência gravada em evidencias/verifica_pos-destroy_20261005T044353Z.txt
