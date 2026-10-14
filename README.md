@@ -104,7 +104,7 @@ git add -A && git commit -m "Parte 1 (AV1)" && git tag av1-entrega && git push o
 
 Derrube tudo na conta do grupo **antes** de o avaliador rodar, para não haver custo residual.
 
-## Custos esperados
+## Custos Esperados
 
 Com os volumes da Parte 1, cada consulta custa frações de centavo (mínimo cobrado: 10 MB = US$ 0,0000477). S3 e DynamoDB sob demanda ficam em centavos por mês enquanto a stack estiver de pé.
 
